@@ -16,6 +16,7 @@
 
 <script setup>
 import NewTask from "./components/NewTask.vue";
+import Filter from "./components/Filter.vue"
 import Task from "./components/Task.vue";
 import { useTasks } from "./store/Tasks"
 import { storeToRefs } from "pinia"

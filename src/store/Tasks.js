@@ -3,7 +3,8 @@ import { defineStore } from 'pinia';
 export const useTasks = defineStore('tasks', {
     state: () => ({
         tasks: JSON.parse(localStorage.getItem("tasks")) || [],
-        modalIsActive: false
+        modalIsActive: false,
+        filter: ""
     }),
     getters: {
         filteredTasks: (state) => {
@@ -33,6 +34,9 @@ export const useTasks = defineStore('tasks', {
         },
         closeModal() {
             this.modalIsActive = false
+        },
+        setFilter(value) {
+            this.filter = value
         }
     }
 });
